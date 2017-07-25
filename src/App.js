@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Route, Link, withRouter, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -8,33 +8,12 @@ import Page from './Page';
 
 
 class App extends Component {
-  state = {
-    src: ''
-  }
 
   setUrl = (event) => {
     if(event.key === 'Enter') {
-      let url;
       let src = document.getElementsByClassName('App__url_input')[0].value;
-      try { 
-        url = new URL(src) 
-      } catch (e) {
-        url = null
-      }
-
-      if (url) {
-        this.props.history.push('/');
-        this.setState({
-          src: url
-        });
-      } else {
-        this.props.history.push('/home');
-      }
+      this.props.history.push(`/page/${src}`);
     }
-  }
-
-  componentDidMount() {
-    this.props.history.push('/home');
   }
 
   render() {
@@ -46,10 +25,11 @@ class App extends Component {
           </button>
           <input className="App__url_input" type="text" onKeyPress={this.setUrl} />
         </div>
-          <div>
-            <Route exact path="/" render={() => ( <Page src={this.state.src}/> )} />
-            <Route path="/home" component={Home} />
-          </div>
+          <Switch>
+            <Route exact path="/" component = {Home} />
+            <Route path="/home" component = {Home} />
+            <Route path="/page/:url" render = {() => ( <Page src = { this.props.location.pathname.slice(6) } /> )} />
+          </Switch>
       </div>
     );
   }
