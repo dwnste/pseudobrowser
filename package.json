@@ -1,6 +1,7 @@
 {
   "name": "pseudobrowser",
   "version": "0.1.0",
+  "homepage": "https://dwnste.github.io/pseudobrowser/",
   "private": true,
   "dependencies": {
     "react": "^15.6.1",

@@ -12,7 +12,7 @@ const Page = (props) => {
     if (url) {
         return <iframe title="This is a unique title" src={props.src} frameBorder="0"></iframe>
     } else {
-        return <p>Неправильный URL</p>
+        return <p>Wrong URL</p>
     }
 }
 
