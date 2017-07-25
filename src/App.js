@@ -3,12 +3,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import './App.css';
 
-const ErrorPage = (props) => {
-  return <div>
-      <p> Can't load this </p>
-    </div>
-}
-
 const Home = (props) => {
   return <div className="home_wrapper">
       <p> Welcome home. </p>
@@ -68,7 +62,6 @@ class App extends Component {
           </div>
             <div>
               <Route exact path="/" render={() => ( <Page src={this.state.src}/> )} />
-              <Route path="/error" component={ErrorPage} />
               <Route path="/home" component={Home} />
             </div>
         </div>
