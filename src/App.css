@@ -3,7 +3,7 @@
   height: 100%;
 }
 
-.App-header {
+.App__header {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -13,7 +13,7 @@
   margin: 0;
 }
 
-.url_input {
+.App__url_input {
   flex-grow: 1;
   height: 24px;
   padding: 1px 10px;
@@ -21,7 +21,7 @@
   border: 2px solid #777;
 }
 
-.home_button {
+.App__home_button {
   flex-shrink: 0;
   height: 30px;
   color: #fff;
@@ -33,11 +33,11 @@
   outline:none;
 }
 
-.home_wrapper {
+.Home__wrapper {
   color: #fff;
 }
 
-.home_wrapper img {
+.Home__wrapper img {
   position: absolute;
   bottom: 0;
   right: 0;
