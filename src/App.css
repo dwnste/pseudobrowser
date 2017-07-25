@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #333;
+  height: 30px;
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.url_input {
+  flex-grow: 1;
+  height: 24px;
+  padding: 1px 10px;
+  border-radius: 5px;
+  border: 2px solid #777;
+}
+
+.home_button {
+  flex-shrink: 0;
+  height: 30px;
+  color: #fff;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.home_wrapper {
+  color: #fff;
+}
+
+.home_wrapper img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+}
+
+iframe {
+  position: fixed;
+  background: #000;
+  border: none;
+  top: 50px; right: 0;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #888;
+  text-decoration: none;
+}
